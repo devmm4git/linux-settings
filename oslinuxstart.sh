@@ -23,6 +23,8 @@
     sudo unzip Arc-DarkestTheme.zip -d ArchThemeFolder/ && echo "       >> Unziped File  OK "
     cp -r /tmp/ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
 
+    # + Instalamos Kitty. 
+    sudo apt install kitty
 
     # + Instalamos BitWarden. 
     #   .... Download From Ubuntu Software (APP)
