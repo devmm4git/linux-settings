@@ -24,7 +24,9 @@
     cp -r /tmp/ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
 
     # + Instalamos Kitty. 
-    sudo apt install kitty
+    sudo apt install kitty && echo "       >> Kitty Installed OK "
+    sudo cp Broadcast.conf ~/.config/kitty/
+    sudo cp kitty.conf  ~/.config/kitty/    
 
     # + Instalamos BitWarden. 
     #   .... Download From Ubuntu Software (APP)
