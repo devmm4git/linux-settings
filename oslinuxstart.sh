@@ -57,22 +57,29 @@
     #             https://thucnc.medium.com/how-to-create-a-sudo-user-on-ubuntu-and-allow-ssh-login-20e28065d9ff
     #             https://phoenixnap.com/kb/ssh-permission-denied-publickey
     #             https://itslinuxfoss.com/resolve-ssh-permission-denied-publickey-error/
-    
-    sudo apt install lxd-installer      && echo "       >> LXD Containers Installed OK "
-    sudo snap install lxd --channel=latest/stable
-    sudo sudo lxd init      && echo "       >> LXD Setup OK "
 
-        # Adding New rules to the bridge
-        sudo ufw allow in on lxdbr0 comment 'lxdbr0 for LXD'
-        sudo ufw route allow in on lxdbr0 comment 'lxdbr0 for LXD'
-        sudo ufw route allow out on lxdbr0 comment 'lxdbr0 for LXD'
-        echo "       >> LXD Rtules to the bridge added OK "
+    read -p "Install LXD Containers (Y/N)? " yn
+    case $yn in
+        [Yy]* )  
+                sudo apt install lxd-installer      && echo "       >> LXD Containers Installed OK "
+                sudo snap install lxd --channel=latest/stable
+                sudo sudo lxd init      && echo "       >> LXD Setup OK "
+            
+                    # Adding New rules to the bridge
+                    sudo ufw allow in on lxdbr0 comment 'lxdbr0 for LXD'
+                    sudo ufw route allow in on lxdbr0 comment 'lxdbr0 for LXD'
+                    sudo ufw route allow out on lxdbr0 comment 'lxdbr0 for LXD'
+                    echo "       >> LXD Rtules to the bridge added OK "
+            
+                    # Ready to create first linux container
+                    sudo lxc launch ubuntu:18.04 base
+                    sudo lxc list
+                    echo "       >> LXD Fisrt Container Ready to Configure OK "
+                    echo "----------------------------------------------------------------------------"
 
-        # Ready to create first linux container
-        sudo lxc launch ubuntu:18.04 base
-        sudo lxc list
-        echo "       >> LXD Fisrt Container Ready to Configure OK "
-        echo "----------------------------------------------------------------------------"
+        continue;;
+        [Nn]* ) 
+    esac
 
         # Create SSH publick Keys 
 
