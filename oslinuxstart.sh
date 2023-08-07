@@ -29,8 +29,8 @@
     echo "----------------------------------------------------------------------------"
     
     # + Instalamos Thunderbird Mail 
-    sudo install thunderbird  && echo "       >> Thunderbird Insalled OK "
-    && echo "----------------------------------------------------------------------------"
+    sudo apt-get install thunderbird  && echo "       >> Thunderbird Insalled OK "
+    echo "----------------------------------------------------------------------------"
 
     # + Instalamos Kitty. 
     sudo apt install kitty && echo "       >> Kitty Installed OK "
