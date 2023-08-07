@@ -89,8 +89,11 @@ echo "      -) Agregar Awsome Titles && Disable Ubuntu Dock :: (APP) Extension M
 echo "      -) Aplicar tema :: (APP) Tweaks > Appearance > Applications > ArchThemeFolder "
 echo "      -) Download BitWarden :: (APP) Ubuntu Software > Search Bitwarden or Google It"
 echo "      -) Programas Instalados : Thunderbir, MySQL WorkBench, GitKraken, Visual Studio Code, Kitty "
+echo "      -) Instalar Studio3T, Google Chrome, Extensiones de BitWarden "
+echo "      -) Instalar SSH Keys de GitHub@devmm4 para usar con Visual Studio "
 echo "      -) Instalar Visual Studio Code Extensions :: https://marketplace.visualstudio.com/vscode "
-echo "      -) Instalar SSH Keys de GitHub@devmm4 para usar con Visual Studio
+echo "            -> MongoDB : https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode "
+
 echo "                                                                   "
 echo "                                                                   "
 
