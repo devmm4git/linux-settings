@@ -3,8 +3,7 @@
 
 # Update Platform
     sudo apt update && echo "       >> Updated System OK "
-    sudo apt install net-tools    && echo "       >> Installed Net-Tools OK "
-    sudo apt install xclip && echo "       >> Installed XClip OK "
+    sudo apt install net-tools
     echo "----------------------------------------------------------------------------"
 
 # Move temporal folder to download to download all packages.
@@ -37,8 +36,8 @@
 
     # + Instalamos Kitty. 
     sudo apt install kitty && echo "       >> Kitty Installed OK "
-    homedir=$( getent passwd "$USER" | cut -d: -f6 ) # Referencia https://www.hostinger.com/tutorials/bash-concatenate-strings
-    echo "Copy Kitty Settings File to ---> "${homedir}/.config/kitty/ 
+    homedir=$( getent passwd "$USER" | cut -d: -f6 )
+    echo "Copy Kitty Settings File to ---> "${homedir}/.config/kitty/
     sudo cp Broadcast.conf ${homedir}/.config/kitty/ && echo "       >> Downloaded Theme OK "
     sudo cp kitty.conf  ${homedir}/.config/kitty/    && echo "       >> Copied Kitty.conf OK "
     echo "----------------------------------------------------------------------------"
@@ -63,44 +62,7 @@
     #             https://phoenixnap.com/kb/ssh-permission-denied-publickey
     #             https://itslinuxfoss.com/resolve-ssh-permission-denied-publickey-error/
 
-    read -p "Install LXD Containers (Y/N)? " yn
-    case $yn in
-        [Yy]* )  
-                sudo apt install lxd-installer      && echo "       >> LXD Containers Installed OK "
-                sudo snap install lxd --channel=latest/stable
-                sudo sudo lxd init      && echo "       >> LXD Setup OK "
-            
-                    # Adding New rules to the bridge
-                    sudo ufw allow in on lxdbr0 comment 'lxdbr0 for LXD'
-                    sudo ufw route allow in on lxdbr0 comment 'lxdbr0 for LXD'
-                    sudo ufw route allow out on lxdbr0 comment 'lxdbr0 for LXD'
-                    echo "       >> LXD Rtules to the bridge added OK "
-            
-                    # Ready to create first linux container
-                    sudo lxc launch ubuntu:18.04 base
-                    sudo lxc list
-                    echo "       >> LXD Fisrt Container Ready to Configure OK "
-                    echo "----------------------------------------------------------------------------"
-
-        continue;;
-        [Nn]* ) 
-    esac
-
-        # Create SSH publick Keys 
-
-        # Configure SSH root in base container ( Dentro del contenedor )
-            #sudo lxc exec base /bin/bash
-            #sudo passwd     && echo " LXD Base Container root password Set OK "
-            #sudo adduser dev0   
-            #sudo usermod -aG sudo dev0 && echo "Base Container User Dev0 Added OK "
-            # - Create .ssh folder
-            #sudo mkdir ~/.ssh
-
-            #exit 
-        
-        
-
-
+    sudo sh setup-lxdContainers.sh
 
     # + Instalamos BitWarden. 
     #   .... Download From Ubuntu Software (APP)
@@ -122,13 +84,10 @@ echo " ----------------------------------------------------------------- "
 echo "      Instalaciones Manuales (Extras) "
 echo " ----------------------------------------------------------------- "
 echo "      -) Agregar Awsome Titles && Disable Ubuntu Dock :: (APP) Extension Manager "
-echo "      -) Listo para aplicar tema :: (APP) Tweaks > Appearance > Applications > ArchThemeFolder "
-echo "      -) Thunderbird Mail Instalado, agregar las extensiones Whats App, Tlegram,  "
+echo "      -) Aplicar tema :: (APP) Tweaks > Appearance > Applications > ArchThemeFolder "
 echo "      -) Download BitWarden :: (APP) Ubuntu Software > Search Bitwarden or Google It"
-echo "      -) Listo para Confifurar SSH LXD Container "
-echo "      -) Instalar Visual Studio Code  "
+echo "      -) Programas Instalados : Thunderbir, MySQL WorkBench, GitKraken, Visual Studio Code, Kitty "
 echo "      -) Instalar Visual Studio Code Extensions :: https://marketplace.visualstudio.com/vscode "
-
 echo "                                                                   "
 
 read -p "Do you wish to Protect GRUB Boot Loader with Password (Y/N)? " yn
