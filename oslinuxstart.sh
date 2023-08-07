@@ -3,7 +3,7 @@
 # Update Platform
     sudo apt update && echo "       >> Updated System OK "
     sudo apt install net-tools
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
 
 # Move temporal folder to download to download all packages.
     #cd /tmp
@@ -11,13 +11,13 @@
 # Instalamos el OnlyOffice
     sudo apt install snapd
     sudo snap install onlyoffice-desktopeditors && echo "       >> OnlyOffice Installed  OK "
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
 
 # Instalamos paqueteria de Software
 
     # + Instalamos la APP de extensiones 
     sudo apt install gnome-shell-extension-manager && echo "        >> Installed Extension Manager (APP) OK "
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
     
     # + Instalamos el tema obscuro
     sudo apt install gnome-tweaks   && echo "       >> Gnome-Tewaks Installed  OK "
@@ -26,7 +26,7 @@
     sudo mkdir ArchThemeFolder  && echo "       >> Folder Created OK "
     sudo unzip Arc-DarkestTheme.zip -d ArchThemeFolder/ && echo "       >> Unziped File  OK "
     cp -r ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
     
     # + Instalamos Thunderbird Mail 
     sudo install thunderbird  && echo "       >> Thunderbird Insalled OK "
@@ -36,20 +36,20 @@
     sudo apt install kitty && echo "       >> Kitty Installed OK "
     sudo cp Broadcast.conf ~/.config/kitty/ && echo "       >> Downloaded Theme OK "
     sudo cp kitty.conf  ~/.config/kitty/    && echo "       >> Copied Kitty.conf OK "
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
 
     # + Install Visual Studio Code & Visual Studio Code Insiders
     sudo snap install --classic code && echo "       >> Visual Studio Code Installed OK "
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
 
     # + Install MySQL Workbench
     sudo snap install mysql-workbench-community && echo "       >> MySQL WorkBench OK "
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
     
     # + Install GitKraken 
     sudo wget https://release.gitkraken.com/linux/gitkraken-amd64.deb 
     sudo apt-get install ./gitkraken-amd64.deb && echo "       >>  GitKraken  Installed OK "
-    && echo "----------------------------------------------------------------------------"
+    echo "----------------------------------------------------------------------------"
     
     # + Install LXD Containers
     # Follow these instructions : https://www.cyberciti.biz/faq/install-lxd-on-ubuntu-22-04-lts-using-apt-snap/
@@ -72,7 +72,7 @@
         sudo lxc launch ubuntu:18.04 base
         sudo lxc list
         echo "       >> LXD Fisrt Container Ready to Configure OK "
-        && echo "----------------------------------------------------------------------------"
+        echo "----------------------------------------------------------------------------"
 
         # Create SSH publick Keys 
 
