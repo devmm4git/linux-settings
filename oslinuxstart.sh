@@ -1,39 +1,46 @@
 #!/bin/bash
 
 # Update Platform
-    #sudo apt update && echo "       >> Updated System OK "
+    sudo apt update && echo "       >> Updated System OK "
 
 # Move temporal folder to download to download all packages.
     #cd /tmp
 
 # Instalamos el OnlyOffice
-    #sudo apt install snapd
-    #sudo snap install onlyoffice-desktopeditors && echo "       >> OnlyOffice Installed  OK "
+    sudo apt install snapd
+    sudo snap install onlyoffice-desktopeditors && echo "       >> OnlyOffice Installed  OK "
 
 # Instalamos paqueteria de Software
 
     # + Instalamos la APP de extensiones 
-    #sudo apt install gnome-shell-extension-manager && echo "        >> Installed Extension Manager (APP) OK "
+    sudo apt install gnome-shell-extension-manager && echo "        >> Installed Extension Manager (APP) OK "
 
     # + Instalamos el tema obscuro
-    #sudo apt install gnome-tweaks   && echo "       >> Gnome-Tewaks Installed  OK "
-    ##wget https://web2.mm4.me/linux-tools-install/Arc-DarkestTheme.zip && echo "       >> Download Theme Installed  OK "
-    #sudo apt-get install unzip  && echo "       >> UNZIP Installed  OK "
-    #sudo mkdir ArchThemeFolder  && echo "       >> Folder Created OK "
-    #sudo unzip Arc-DarkestTheme.zip -d ArchThemeFolder/ && echo "       >> Unziped File  OK "
-    #cp -r /tmp/ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
+    sudo apt install gnome-tweaks   && echo "       >> Gnome-Tewaks Installed  OK "
+    #wget https://web2.mm4.me/linux-tools-install/Arc-DarkestTheme.zip && echo "       >> Download Theme Installed  OK "
+    sudo apt-get install unzip  && echo "       >> UNZIP Installed  OK "
+    sudo mkdir ArchThemeFolder  && echo "       >> Folder Created OK "
+    sudo unzip Arc-DarkestTheme.zip -d ArchThemeFolder/ && echo "       >> Unziped File  OK "
+    cp -r /tmp/ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
 
     # + Instalamos Thunderbird Mail 
-    #sudo install thunderbird  && echo "       >> Thunderbird Insalled OK "
+    sudo install thunderbird  && echo "       >> Thunderbird Insalled OK "
 
     # + Instalamos Kitty. 
-    #sudo apt install kitty && echo "       >> Kitty Installed OK "
-    #sudo cp Broadcast.conf ~/.config/kitty/ && echo "       >> Downloaded Theme OK "
-    #sudo cp kitty.conf  ~/.config/kitty/    && echo "       >> Copied Kitty.conf OK "
+    sudo apt install kitty && echo "       >> Kitty Installed OK "
+    sudo cp Broadcast.conf ~/.config/kitty/ && echo "       >> Downloaded Theme OK "
+    sudo cp kitty.conf  ~/.config/kitty/    && echo "       >> Copied Kitty.conf OK "
 
+    # + Install Visual Studio Code & Visual Studio Code Insiders
+    sudo snap install --classic code
+
+    # + Install MySQL Workbench
+    sudo snap install mysql-workbench-community
+
+    
     # + Install GitKraken 
-    #sudo wget https://release.gitkraken.com/linux/gitkraken-amd64.deb 
-    #sudo apt-get install ./gitkraken-amd64.deb && echo "       >>  GitKraken  Installed OK "
+    sudo wget https://release.gitkraken.com/linux/gitkraken-amd64.deb 
+    sudo apt-get install ./gitkraken-amd64.deb && echo "       >>  GitKraken  Installed OK "
 
     # + Install LXD Containers
     # Follow these instructions : https://www.cyberciti.biz/faq/install-lxd-on-ubuntu-22-04-lts-using-apt-snap/
@@ -44,7 +51,7 @@
     
     sudo apt install lxd-installer      && echo "       >> LXD Containers Installed OK "
     sudo snap install lxd --channel=latest/stable
-    #sudo sudo lxd init      && echo "       >> LXD Setup OK "
+    sudo sudo lxd init      && echo "       >> LXD Setup OK "
 
         # Adding New rules to the bridge
         sudo ufw allow in on lxdbr0 comment 'lxdbr0 for LXD'
