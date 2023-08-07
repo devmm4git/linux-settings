@@ -24,7 +24,7 @@
     #wget https://web2.mm4.me/linux-tools-install/Arc-DarkestTheme.zip && echo "       >> Download Theme Installed  OK "
     sudo apt-get install unzip  && echo "       >> UNZIP Installed  OK "
     sudo mkdir ArchThemeFolder  && echo "       >> Folder Created OK "
-    sudo unzip Arc-DarkestTheme.zip -d ArchThemeFolder/ && echo "       >> Unziped File  OK "
+    sudo unzip Arc-Darkest-Theme.zip  -d ArchThemeFolder/ && echo "       >> Unziped File  OK "
     pwd
     cp -r ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
     echo "----------------------------------------------------------------------------"
