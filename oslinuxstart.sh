@@ -3,7 +3,9 @@
 
 # Update Platform
     sudo apt update && echo "       >> Updated System OK "
-    sudo apt install net-tools
+    sudo apt install net-tools && echo "       >> NetTools Installed OK "
+    sudo apt-get -y install xclip && echo "       >> XClip Installed OK "
+    sudo apt-get install git && echo "       >> Git Installed OK "
     echo "----------------------------------------------------------------------------"
 
 # Move temporal folder to download to download all packages.
@@ -88,6 +90,7 @@ echo "      -) Aplicar tema :: (APP) Tweaks > Appearance > Applications > ArchTh
 echo "      -) Download BitWarden :: (APP) Ubuntu Software > Search Bitwarden or Google It"
 echo "      -) Programas Instalados : Thunderbir, MySQL WorkBench, GitKraken, Visual Studio Code, Kitty "
 echo "      -) Instalar Visual Studio Code Extensions :: https://marketplace.visualstudio.com/vscode "
+echo "                                                                   "
 echo "                                                                   "
 
 read -p "Do you wish to Protect GRUB Boot Loader with Password (Y/N)? " yn
