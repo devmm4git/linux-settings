@@ -49,6 +49,10 @@
                     sudo lxc exec base -- apt update
                     sudo lxc exec base -- apt install apache2   && echo "       >> LAMP Installed OK"
                     echo "----------------------------------------------------------------------------"
+                    echo "          >> Python3 Installed by Default in Ubuntu 22.04 "
+                    sudo apt install python3
+                    sudo python3 --version
+                    echo "----------------------------------------------------------------------------"
                     sudo lxc exec base --  sudo adduser ubu
                     sudo lxc exec base --  usermod -aG sudo ubu && echo "       >> UBU User Created OK"
                     echo "----------------------------------------------------------------------------"
