@@ -25,8 +25,8 @@
     sudo apt-get install unzip  && echo "       >> UNZIP Installed  OK "
     sudo mkdir ArchThemeFolder  && echo "       >> Folder Created OK "
     sudo unzip Arc-Darkest-Theme.zip  -d ArchThemeFolder/ && echo "       >> Unziped File  OK "
-    pwd
-    cp -r ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
+    sudo pwd
+    sudo cp -r ArchThemeFolder /usr/share/themes/ && echo "       >> Listo para aplicar tema OK "
     echo "----------------------------------------------------------------------------"
     
     # + Instalamos Thunderbird Mail 
