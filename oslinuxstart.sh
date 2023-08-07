@@ -90,6 +90,7 @@ echo "      -) Aplicar tema :: (APP) Tweaks > Appearance > Applications > ArchTh
 echo "      -) Download BitWarden :: (APP) Ubuntu Software > Search Bitwarden or Google It"
 echo "      -) Programas Instalados : Thunderbir, MySQL WorkBench, GitKraken, Visual Studio Code, Kitty "
 echo "      -) Instalar Visual Studio Code Extensions :: https://marketplace.visualstudio.com/vscode "
+echo "      -) Instalar SSH Keys de GitHub@devmm4 para usar con Visual Studio
 echo "                                                                   "
 echo "                                                                   "
 
