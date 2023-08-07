@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Update Platform
     sudo apt update && echo "       >> Updated System OK "
     sudo apt install net-tools
@@ -35,8 +36,10 @@
 
     # + Instalamos Kitty. 
     sudo apt install kitty && echo "       >> Kitty Installed OK "
-    sudo cp Broadcast.conf ~/.config/kitty/ && echo "       >> Downloaded Theme OK "
-    sudo cp kitty.conf  ~/.config/kitty/    && echo "       >> Copied Kitty.conf OK "
+    homedir=$( getent passwd "$USER" | cut -d: -f6 )
+    echo "Copy Kitty Settings File to ---> "${homedir}/.config/kitty/
+    sudo cp Broadcast.conf ${homedir}/.config/kitty/ && echo "       >> Downloaded Theme OK "
+    sudo cp kitty.conf  ${homedir}/.config/kitty/    && echo "       >> Copied Kitty.conf OK "
     echo "----------------------------------------------------------------------------"
 
     # + Install Visual Studio Code & Visual Studio Code Insiders
@@ -124,6 +127,8 @@ echo "      -) Download BitWarden :: (APP) Ubuntu Software > Search Bitwarden or
 echo "      -) Listo para Confifurar SSH LXD Container "
 echo "      -) Instalar Visual Studio Code  "
 echo "      -) Instalar Visual Studio Code Extensions :: https://marketplace.visualstudio.com/vscode "
+
+echo "                                                                   "
 
 read -p "Do you wish to Protect GRUB Boot Loader with Password (Y/N)? " yn
 case $yn in
