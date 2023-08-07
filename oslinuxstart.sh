@@ -3,7 +3,8 @@
 
 # Update Platform
     sudo apt update && echo "       >> Updated System OK "
-    sudo apt install net-tools
+    sudo apt install net-tools    && echo "       >> Installed Net-Tools OK "
+    sudo apt install xclip && echo "       >> Installed XClip OK "
     echo "----------------------------------------------------------------------------"
 
 # Move temporal folder to download to download all packages.
